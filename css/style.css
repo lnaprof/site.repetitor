@@ -1562,6 +1562,9 @@ body.form-visible .sticky-cta { transform: translateY(150%); }
 
 @media (min-width: 721px) {
   .sticky-cta { display: none; }
+  /* плашки «Напишите мне напрямую» — по правому краю (кроме мобильных) */
+  .contact__msg-label { text-align: right; }
+  .contact__msg-buttons { justify-content: flex-end; }
 }
 
 /* ============ ГОТОВНОСТЬ (load) ============ */
