@@ -950,14 +950,25 @@ section { position: relative; }
   transition: box-shadow var(--transition), transform var(--transition);
 }
 
+/* иконка + текст всегда в одной строке; кнопка может уходить на свою строку */
+.price__trigger-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
 .price__trigger-icon {
   font-size: 28px;
   color: var(--coral);
   animation: sparkle 2.6s ease-in-out infinite;
+  flex-shrink: 0;
 }
 
 .price__trigger p {
   flex: 1 1 auto;
+  min-width: 0;
   font-size: 17px;
   color: var(--navy);
   line-height: 1.5;
@@ -1506,15 +1517,16 @@ body.form-visible .sticky-cta { transform: translateY(150%); }
   .review-card__head { flex-wrap: wrap; row-gap: 10px; }
   .review-card__stars { margin-left: 0; margin-top: 4px; }
 
-  .reviews__arrow { width: 44px; height: 44px; background: rgba(255, 255, 255, 0.92); }
+  /* на мобильных стрелкам нет места вне карточек — листаем точками и свайпом */
+  .reviews__arrow { display: none; }
   .reviews__viewport { margin: 0; }
-  .reviews__arrow--prev { left: 6px; }
-  .reviews__arrow--next { right: 6px; }
 
   .price__grid { grid-template-columns: 1fr; }
   .price-card { padding: 28px 24px; }
   .price-card__note { min-height: 0; }
-  .price__trigger { padding: 18px 22px; }
+  .price__trigger { padding: 18px 24px; gap: 12px; }
+  .price__trigger-main { gap: 12px; }
+  .price__trigger .btn { width: 100%; }
 
   .faq__question { padding: 18px 20px; font-size: 17px; }
   .faq__answer { padding: 0 20px; }
