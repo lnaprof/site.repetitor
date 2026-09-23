@@ -1,0 +1,8 @@
+# Локальный dev-сервер (не нужен на GitHub Pages)
+server.ps1
+
+# Служебные файлы ОС и редакторов
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.log
