@@ -1241,7 +1241,7 @@ section { position: relative; }
   font-size: 16.5px;
   font-weight: 500;
   line-height: 1.7;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   max-width: 480px;
 }
 
@@ -1264,10 +1264,7 @@ section { position: relative; }
 }
 
 .contact__messengers {
-  grid-column: 1 / -1;
-  margin-top: 60px;
-  padding-top: 44px;
-  border-top: 1px solid rgba(26, 38, 56, 0.15);
+  margin-top: 26px;
 }
 
 .contact__msg-btn {
