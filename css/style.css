@@ -1267,6 +1267,15 @@ section { position: relative; }
   margin-top: 26px;
 }
 
+/* Плашки мессенджеров: на десктопе — в левой колонке под текстом (--inline),
+   на мобильных/планшете — под формой (--bottom) */
+.contact__messengers--inline { display: none; }
+
+@media (min-width: 961px) {
+  .contact__messengers--inline { display: block; }
+  .contact__messengers--bottom { display: none; }
+}
+
 .contact__msg-btn {
   display: flex;
   align-items: center;
