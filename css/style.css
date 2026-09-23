@@ -1357,6 +1357,18 @@ section { position: relative; }
   padding-top: 40px;
 }
 
+.footer__inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.footer__main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
 .footer__disclaimer {
   font-size: 12px;
   line-height: 1.65;
@@ -1367,10 +1379,21 @@ section { position: relative; }
 }
 
 .footer__copy {
-  margin-top: 22px;
+  margin-bottom: 12px;
   text-align: center;
   font-size: 13px;
   color: rgba(26, 38, 56, 0.6);
+}
+
+/* права правообладателя — сбоку, мелким шрифтом */
+.footer__rights {
+  flex-shrink: 0;
+  max-width: 240px;
+  margin-top: 2px;
+  font-size: 11px;
+  line-height: 1.6;
+  color: rgba(26, 38, 56, 0.55);
+  text-align: right;
 }
 
 /* ============ STICKY CTA (мобильные) ============ */
@@ -1533,6 +1556,9 @@ body.form-visible .sticky-cta { transform: translateY(150%); }
 
   .contact__form-wrap { padding: 30px 24px; }
   .contact__banner { padding: 18px 20px; }
+
+  .footer__inner { flex-direction: column; align-items: center; gap: 14px; }
+  .footer__rights { text-align: center; max-width: none; }
 
   .sticky-cta { display: flex; }
 }
